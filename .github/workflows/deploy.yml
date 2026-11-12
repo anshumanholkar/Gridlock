@@ -34,7 +34,7 @@ jobs:
         run: npm ci
 
       - name: Build Web Application
-        run: npx expo export -p web
+        run: npx expo export -p web && touch dist/.nojekyll
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
