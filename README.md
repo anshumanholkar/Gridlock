@@ -1,54 +1,142 @@
-# ⚡ GRIDLOCK — Plan. Focus. Grow.
+<div align="center">
 
-> **An Autonomous Discipline Protocol & AI Accountability Mobile Architecture**  
-> Built with **React Native**, **Expo SDK 58**, **TypeScript**, **Google Gemini AI**, and **Supabase**.
+# ⚡ GRIDLOCK
+### *Plan. Focus. Grow.*
+
+**Autonomous Discipline Protocol & AI Accountability Mobile Architecture**
+
+[![React Native](https://img.shields.io/badge/React_Native-0.88.1-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactnative.dev/)
+[![Expo SDK](https://img.shields.io/badge/Expo_SDK-58.0.22-000020?style=for-the-badge&logo=expo&logoColor=white)](https://expo.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-Strict_Type_Safe-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Google Gemini](https://img.shields.io/badge/Google_Gemini-1.5_Flash-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://ai.google.dev/)
+[![Supabase](https://img.shields.io/badge/Supabase-Realtime_Cloud-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)](https://supabase.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-E5A93C?style=for-the-badge)](LICENSE)
+
+<br/>
+
+*An uncompromising mobile system engineered to eliminate procrastination, enforce daily execution through multimodal AI vision audits, and foster squad competition.*
+
+</div>
 
 ---
 
-## 📌 Executive Summary
+## 📱 Visual Showcase & Application Tour
 
-**GRIDLOCK** is a high-performance personal accountability and execution engine designed to eliminate procrastination through verifiable proof mechanisms, adaptive AI coaching, and competitive squad dynamics.
-
-Unlike passive to-do apps, GRIDLOCK operates on a **Zero Unverified Quotas** model:
-- Tasks cannot be marked complete without **cryptographic or visual evidence** audited in real-time by Multimodal AI.
-- An intelligent **AI Coach (Vance)** detects daily friction (burnout, distraction, trading tilt, procrastination) and enforces corrective micro-sprints.
-- Squad mechanics foster peer accountability through **Group Leaderboards**, weekly XP resets, and customizable privacy filters.
+<div align="center">
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <b>⚡ HQ Command Center</b><br/>
+      <i>Lockout countdown, progress ring, Vance widget & Top 3</i><br/><br/>
+      <img src="docs/screenshots/01_hq_dashboard.png" width="340" alt="HQ Dashboard"/>
+    </td>
+    <td align="center" width="50%">
+      <b>🎨 Dynamic Tactical Themes</b><br/>
+      <i>Instant reactive switching to Electric Blue palette</i><br/><br/>
+      <img src="docs/screenshots/02_theme_electric_blue.png" width="340" alt="Electric Blue Theme"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <b>👤 Operative Dossier (Profile)</b><br/>
+      <i>Your Growth daily trend chart, Achievements & Dual-XP</i><br/><br/>
+      <img src="docs/screenshots/03_profile_dossier.png" width="340" alt="Profile Dossier"/>
+    </td>
+    <td align="center" width="50%">
+      <b>🧭 AI Learning Roadmap Suggestor</b><br/>
+      <i>Curriculum architect with sources & 1-tap task sync</i><br/><br/>
+      <img src="docs/screenshots/04_roadmap_suggestor.png" width="340" alt="Roadmap Suggestor"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <b>⏱️ Training & Execution Hub</b><br/>
+      <i>Proctor study timer, Quiz playground & Pomodoro lockout</i><br/><br/>
+      <img src="docs/screenshots/05_training_barracks.png" width="340" alt="Training Hub"/>
+    </td>
+    <td align="center" width="50%">
+      <b>📊 Squad Performance Architecture</b><br/>
+      <i>Live group leaderboard & multi-metric performance comparison</i><br/><br/>
+      <img src="docs/screenshots/06_squad_leaderboard.png" width="340" alt="Squad Leaderboard"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <b>🎨 6 Tactical Accent Palettes</b><br/>
+      <i>Obsidian Gold, Acid Lime, Electric Blue, Cyan, Crimson, Mono</i><br/><br/>
+      <img src="docs/screenshots/07_theme_palette_selector.png" width="340" alt="Theme Selector"/>
+    </td>
+    <td align="center" width="50%">
+      <b>💬 AI Coach Vance Terminal</b><br/>
+      <i>Contextual problem diagnostic & surgical action protocol</i><br/><br/>
+      <img src="docs/screenshots/08_ai_coach_vance.png" width="340" alt="Coach Vance"/>
+    </td>
+  </tr>
+</table>
+</div>
 
 ---
 
-## 🚀 Core Features & Architectural Pillars
+## 🏛️ System Architecture
 
-### 1. ⚡ HQ Command Center & Daily Discipline To-Do
-- **"What I Did vs What Not" Protocol**: Clear separation of verified completions and pending quotas.
-- **AI-Audited Proof Submission**: Users submit photo or camera proofs of completed tasks (e.g. textbook pages, gym check-in, code commits); Gemini Vision audits proof authenticity, assign confidence scores, and verifies completion.
-- **Lockout Countdown Gauge**: Real-time timer counting down to the midnight (00:00) deadline, creating urgency and focus.
-- **Circular Progress Ring**: Real-time completion percentage and task completion metrics.
-- **"Today's Top 3" Priority Focus**: High-priority mandates surfaced front-and-center.
+The following diagram illustrates the data flow, AI verification pipeline, and state synchronization across the GRIDLOCK architecture:
 
-### 2. 🤖 AI Coach Vance (Contextual Performance Engine)
-- **Deep Performance Analysis**: Continuously scans completed mandates, remaining hours, and active streaks to assess lockout risk.
-- **Problem-Understanding Chatbot**: Diagnoses user fatigue, distraction, or overwhelm and prescribes surgical 3-step action protocols rather than canned responses.
-- **One-Tap Focus Lockout**: Initiates distraction-free sprint timers.
+```mermaid
+flowchart TD
+    Operative([👤 Operative]) --> UI[📱 Mobile Application Shell (App.tsx)]
+    
+    subgraph CorePillars [Core Operational Pillars]
+      UI --> HQ[⚡ HQ Command Center]
+      UI --> Sugg[🧭 AI Roadmap Suggestor]
+      UI --> Train[⏱️ Execution Barracks]
+      UI --> Anal[📊 Squad Analytics Hub]
+    end
 
-### 3. 🧭 Adaptive Learning Roadmap Suggestor
-- **AI Curriculum Architect**: Enter any custom domain (e.g., *Trading & Price Action*, *Operating Systems & Kernels*, *Hypertrophy Biomechanics*).
-- **Curated Learning Pipelines**: Generates structured, phased roadmaps with authoritative textbooks, video courses, and research papers.
-- **1-Tap Task Sync**: Directly converts roadmap milestones into daily executable tasks in the HQ dashboard.
+    subgraph VerificationEngine [Multimodal AI Verification Engine]
+      HQ --> Proof[📸 Photo Proof Submission]
+      Proof --> GeminiAudit[🤖 Google Gemini 1.5 Flash Vision]
+      GeminiAudit --> Audited{Confidence >= 75%?}
+      Audited -- Verified --> AwardXP[🏆 Award 100 XP + Update Streak]
+      Audited -- Insufficient --> FlagRetry[⚠️ Flag Mandate & Require Audit Retake]
+    end
 
-### 4. ⏱️ Training & Execution Hub
-- **Proctor Study Timer & Note Scan**: Focus timer with camera presence simulation and handwritten note scanner.
-- **Domain-Adaptive Quiz Playground**: 4 training modes (Memory Recall, 60s Rapid Blitz, 3-Lives Sudden Death, and Spaced-Repetition Flashcards) dynamically tailored to user-specified topics.
-- **Distraction-Free Focus Lockout**: Full-screen Pomodoro protocol designed to keep operatives on task.
-- **Sunday Reset Protocol**: 5-step weekly operational review and penalty multiplier clear.
+    subgraph IntelligenceEngine [Adaptive NLP & Curriculum]
+      Sugg --> GeminiRoadmap[🧠 Gemini Curriculum Architect]
+      GeminiRoadmap --> RoadmapTasks[📋 1-Tap Daily Task Injection]
+      RoadmapTasks --> HQ
+      Train --> QuizGen[🎯 Domain-Adaptive 20Q Quiz Engine]
+      HQ --> Vance[🤖 AI Coach Vance Diagnostic]
+    end
 
-### 5. 📊 Squad Performance & Group Leaderboard
-- **Squad Code System**: Create or join 5-operative accountability squads using unique codes.
-- **Performance Comparison Graph**: Live bar-graph comparison of XP, daily tasks, and consecutive streaks across teammates.
-- **Dual-XP Architecture**: Weekly XP (reloaded every Monday 00:00 to give everyone a fresh start) alongside permanent lifetime career XP.
-- **Granular Privacy Controls**: Operatives choose exactly which metrics (XP, streak, task list, physique logs) to disclose to squad members.
+    subgraph Persistence [Persistence & Cloud Layer]
+      AwardXP --> LocalStore[(💾 Device AsyncStorage)]
+      AwardXP --> CloudSync[(☁️ Supabase PostgreSQL Cloud)]
+      CloudSync --> SquadLeaderboard[👥 5-Operative Squad Ranking]
+      SquadLeaderboard --> Anal
+    end
+```
 
-### 6. 🎨 Dynamic Reactive Theme Engine
-Instantaneous theme switching across 6 tactical palettes:
+---
+
+## 💎 Core Innovation & Differentiators
+
+### 1. 🛡️ The "Zero Unverified Quotas" Model
+Standard productivity apps rely on honor systems where users simply tap checkboxes without doing the work. **GRIDLOCK rejects unearned completion:**
+- Completed mandates require **cryptographic camera or photo evidence** (e.g., opened physical textbooks, terminal output, gym equipment, trade tickets).
+- **Gemini 1.5 Flash Vision** inspects the image in real time, generates an audit rationale, computes a confidence percentage, and logs the verification stamp.
+
+### 2. ⚡ Dual-XP Scoring Economics
+- **Weekly XP**: Reloads to `0` every Monday at `00:00 UTC` to eliminate runaway leaderboards and maintain intense weekly squad competition.
+- **Lifetime Career XP**: Permanently accumulates across the operative's career to reflect total lifetime volume and rank advancement.
+
+### 3. 🧠 Contextual Problem-Solving AI Coach (Vance)
+Unlike static chatbots that return canned generic advice:
+- Scans current pace vs remaining hours until the 00:00 midnight lockout.
+- Classifies user friction (**Fatigue**, **Phone Distraction**, **Procrastination**, **Trading Tilt**, **Study Overwhelm**).
+- Prescribes surgical, structured protocols with zero cognitive overhead.
+
+### 4. 🎨 Hardware-Calibrated Reactive Theme Engine
+A high-performance color architecture that updates the entire app dynamically across 6 curated palettes:
 - **Obsidian × Amber Gold** (Default Luxury Performance)
 - **Midnight × Acid Lime** (Tactical Neon)
 - **Electric Blue** (Sapphire Deep Focus)
@@ -58,72 +146,78 @@ Instantaneous theme switching across 6 tactical palettes:
 
 ---
 
-## 🛠️ Technology Stack
+## 🛠️ Technology Stack Breakdown
 
-| Layer | Technologies |
-|---|---|
-| **Framework** | [React Native](https://reactnative.dev/) with [Expo SDK 58](https://expo.dev/) |
-| **Language** | [TypeScript](https://www.typescriptlang.org/) (Strict typing across models and views) |
-| **AI Integration** | [Google Gemini 1.5 Flash](https://ai.google.dev/) (Multimodal vision audit, roadmap architecture, contextual coaching) |
-| **Backend & Cloud** | [Supabase](https://supabase.com/) (PostgreSQL real-time squad synchronization & cloud backup) |
-| **Storage & Security** | `@react-native-async-storage/async-storage` (Hardware-level local persistence and multi-account state) |
-| **Hardware APIs** | `expo-camera`, `expo-image-picker`, `expo-file-system`, `expo-status-bar` |
-
----
-
-## 📂 Project Directory Structure
-
-```
-gridlock-app/
-├── App.tsx                     # Master app shell, auth gate, bottom navigation & top dossier
-├── app.json                    # Expo configuration & hardware permissions
-├── package.json                # Dependencies and project scripts
-├── tsconfig.json               # TypeScript compiler options
-└── src/
-    ├── types.ts                # TypeScript domain models (UserProfile, TaskItem, Squad, Theme)
-    ├── theme.ts                # Dynamic 6-palette reactive theme engine
-    ├── components/
-    │   ├── TopCoachWidget.tsx          # Real-time AI Coach Vance widget & friction analyzer
-    │   ├── QuickAddModal.tsx           # Rapid mandate creation with priority & calendar sync
-    │   ├── ProofSubmissionModal.tsx    # Multimodal photo proof upload & AI verification
-    │   └── PhoneWidgetPreview.tsx      # Homescreen widget preview
-    ├── screens/
-    │   ├── DashboardScreen.tsx         # HQ Command Center (What I Did vs Not, Top 3, Metrics)
-    │   ├── SuggestorScreen.tsx         # Learning Roadmap AI Suggestor
-    │   ├── TrainingHubScreen.tsx       # Training Barracks & protocols selector
-    │   ├── AnalysisScreen.tsx          # Squad comparison, leaderboards, and analytics
-    │   ├── SettingsScreen.tsx          # Theme switcher, privacy controls, multi-account setup
-    │   ├── CoachScreen.tsx             # Interactive intelligent coach chat terminal
-    │   ├── PlaygroundScreen.tsx        # 4-mode topic-adaptive quiz simulator
-    │   ├── StudyScreen.tsx             # Camera study proctor timer
-    │   ├── FocusModeScreen.tsx         # Distraction-free lockout Pomodoro
-    │   ├── GroupLeaderboardScreen.tsx  # Detailed squad rankings & graph
-    │   ├── SundayResetScreen.tsx       # Weekly reset protocol
-    │   ├── HabitTemplatesScreen.tsx    # Turnkey habit stacks
-    │   ├── MonthlyWrappedScreen.tsx    # End-of-month performance review
-    │   └── onboarding/
-    │       ├── WelcomeScreen.tsx       # Boot screen
-    │       ├── AuthScreen.tsx          # Multi-account selector (up to 3 accounts)
-    │       └── OnboardingFlow.tsx      # Squad creation, habit selection, and AI plan generation
-    └── services/
-        ├── storage.ts          # Local persistent key-value & profile manager
-        ├── gemini.ts           # Gemini Vision proof auditing, coach NLP & quiz generation
-        └── backend.ts          # Supabase cloud synchronization
-```
+| Layer | Technology | Purpose |
+|---|---|---|
+| **Mobile Runtime** | [React Native 0.88.1](https://reactnative.dev/) | Cross-platform high-performance native rendering engine |
+| **Tooling & Bundler** | [Expo SDK 58](https://expo.dev/) | Native runtime, Metro bundler, dev tools, and permission bridges |
+| **Language** | [TypeScript 5](https://www.typescriptlang.org/) | Strict type contracts across state, storage, and models |
+| **AI Intelligence** | [Google Gemini 1.5 Flash](https://ai.google.dev/) | Vision verification audit, adaptive curriculum generation & NLP coaching |
+| **Cloud Database** | [Supabase](https://supabase.com/) | Real-time PostgreSQL squad synchronization and multi-device persistence |
+| **Local Storage** | `@react-native-async-storage` | Local hardware keychain persistence with multi-account partitioning |
+| **Hardware APIs** | `expo-camera`, `expo-image-picker` | Native camera capture, album picking, and image compression |
 
 ---
 
-## 💻 Installation & Setup Instructions
+## 📂 Project Organization
+
+```
+Gridlock/
+├── .github/
+│   ├── workflows/ci.yml        # Automated GitHub Actions TypeScript CI
+│   ├── ISSUE_TEMPLATE/         # Structured Bug & Feature request templates
+│   └── PULL_REQUEST_TEMPLATE.md
+├── assets/                     # App icons, splash screens, and vector assets
+├── docs/
+│   └── screenshots/            # Showcase images embedded in documentation
+├── src/
+│   ├── types.ts                # TypeScript domain models (User, Task, Squad, Theme)
+│   ├── theme.ts                # Unified reactive 6-palette theme tokens
+│   ├── components/             # Reusable UI modules
+│   │   ├── TopCoachWidget.tsx          # Real-time AI Coach Vance banner & analyzer
+│   │   ├── ProofSubmissionModal.tsx    # Multimodal photo proof upload & AI verify
+│   │   ├── QuickAddModal.tsx           # Rapid task creator with priority chips
+│   │   └── PhoneWidgetPreview.tsx      # Homescreen widget preview
+│   ├── screens/                # Modular application screens
+│   │   ├── DashboardScreen.tsx         # HQ Command Center (Progress Ring, Top 3, Mandates)
+│   │   ├── SuggestorScreen.tsx         # AI Learning Roadmap Suggestor
+│   │   ├── TrainingHubScreen.tsx       # Execution Barracks & protocol directory
+│   │   ├── AnalysisScreen.tsx          # Squad comparison & analytics hub
+│   │   ├── SettingsScreen.tsx          # 6-theme switcher & privacy controls
+│   │   ├── CoachScreen.tsx             # Interactive intelligent coach terminal
+│   │   ├── PlaygroundScreen.tsx        # 4-mode topic-adaptive quiz simulator
+│   │   ├── StudyScreen.tsx             # Camera study proctor timer
+│   │   ├── FocusModeScreen.tsx         # Distraction-free lockout Pomodoro
+│   │   ├── GroupLeaderboardScreen.tsx  # Detailed squad rankings & graph
+│   │   ├── SundayResetScreen.tsx       # 5-step weekly operational audit
+│   │   └── onboarding/                 # Multi-account auth & personalized plan generator
+│   └── services/
+│       ├── gemini.ts           # Multimodal Gemini Vision auditing & NLP
+│       ├── storage.ts          # Local persistent key-value & profile manager
+│       └── backend.ts          # Supabase cloud synchronization
+├── App.tsx                     # Master app shell, auth gate & top operative dossier
+├── package.json                # Project dependencies and execution scripts
+├── tsconfig.json               # Strict compiler options
+├── CONTRIBUTING.md             # Community contribution guidelines
+├── CODE_OF_CONDUCT.md         # Contributor Covenant standard
+├── SECURITY.md                 # Vulnerability disclosure policy
+└── LICENSE                     # MIT Open Source License
+```
+
+---
+
+## ⚡ Installation & Quickstart
 
 ### Prerequisites
-- [Node.js](https://nodejs.org/) (v18 or newer)
+- [Node.js](https://nodejs.org/) (v18.0 or newer)
 - [npm](https://www.npmjs.com/) or `yarn`
-- [Expo Go](https://expo.dev/go) app installed on your physical mobile device (Android/iOS) **OR** Android Studio Emulator.
+- [Expo Go](https://expo.dev/go) app installed on your physical mobile device **OR** Android Studio / Xcode Emulator.
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/anshumanholkar/gridlock.git
-cd gridlock
+git clone https://github.com/anshumanholkar/Gridlock.git
+cd Gridlock
 ```
 
 ### 2. Install Dependencies
@@ -131,37 +225,45 @@ cd gridlock
 npm install
 ```
 
-### 3. Start the Development Server
+### 3. Verify TypeScript Compilation
+```bash
+npx tsc --noEmit
+```
+
+### 4. Start the Application
 ```bash
 npx expo start
 ```
 
-### 4. Run on Device / Emulator
-- **Physical Device**: Scan the QR code shown in your terminal using the **Expo Go** app (Android) or the native Camera app (iOS).
-- **Android Emulator**: Press `a` in the terminal (or run `npm run android`).
-- **iOS Simulator**: Press `i` in the terminal (or run `npm run ios`).
+### 5. Launch on Target Platform
+- **Physical Device**: Open **Expo Go** on Android (or native Camera on iOS) and scan the QR code displayed in your terminal.
+- **Android Emulator**: Press `a` in your terminal.
+- **iOS Simulator**: Press `i` in your terminal.
+- **Web Browser**: Press `w` in your terminal.
 
 ---
 
-## 🔑 Environment & API Configuration
+## 🔒 Security & Privacy
 
-GRIDLOCK is designed to run seamlessly out-of-the-box with built-in heuristic fallbacks and offline resilience.
-
-To activate live cloud features and high-precision Gemini AI auditing:
-1. Open the app and navigate to **Settings** (⚙️ top-right icon).
-2. Enter your **Google Gemini API Key** (get a free key at [Google AI Studio](https://aistudio.google.com/)).
-3. (Optional) Enter your **Supabase URL & Anon Key** to enable live multi-device squad synchronization.
-4. Tap **Save Configuration** — keys are encrypted in device hardware storage.
+- **Offline Resilience**: GRIDLOCK features an autonomous offline mode with built-in heuristic audits if no internet connection or API keys are detected.
+- **Client-Side Keychain**: All API keys, tokens, and multi-account partitions are stored directly within the device's sandboxed hardware storage.
+- **Squad Privacy Protection**: Operatives have granular authority in **Settings** to hide XP, streaks, or task details from squad teammates at any time.
 
 ---
 
-## 👨‍💻 Author
+## 🤝 Contributing
 
-**Anshuman Holkar**  
-- GitHub: [@anshumanholkar](https://github.com/anshumanholkar)  
-- Email: anshumanholkar30@gmail.com  
-- Project: **GRIDLOCK Mobile Architecture**
+We welcome contributions! Please review our [Contributing Guidelines](CONTRIBUTING.md) and [Code of Conduct](CODE_OF_CONDUCT.md) before opening a pull request.
 
 ---
 
-*GRIDLOCK — Plan. Focus. Grow. Built for academic submission and high-performance discipline.*
+## 📄 License
+
+This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+
+---
+
+<div align="center">
+  <b>GRIDLOCK</b> · Developed by <b><a href="https://github.com/anshumanholkar">Anshuman Holkar</a></b><br/>
+  <i>Crafted for academic excellence, discipline execution, and open-source collaboration.</i>
+</div>
