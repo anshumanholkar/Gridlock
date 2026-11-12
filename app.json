@@ -1,0 +1,43 @@
+{
+  "expo": {
+    "name": "GRIDLOCK",
+    "slug": "gridlock-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#10110D",
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "com.gridlock.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#10110D",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ]
+    },
+    "plugins": [
+      "expo-status-bar",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "GRIDLOCK requires camera access to proctor verified study presence and scan study notes."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "GRIDLOCK requires photo access for weekly physique scans and emergency proof verification."
+        }
+      ]
+    ]
+  }
+}
