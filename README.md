@@ -5,6 +5,7 @@
 
 **Autonomous Discipline Protocol & AI Accountability Mobile Architecture**
 
+[![Live Demo](https://img.shields.io/badge/🌐_Live_Working_App-Click_to_Launch-00C853?style=for-the-badge&logo=googlechrome&logoColor=white)](https://anshumanholkar.github.io/Gridlock/)
 [![React Native](https://img.shields.io/badge/React_Native-0.88.1-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactnative.dev/)
 [![Expo SDK](https://img.shields.io/badge/Expo_SDK-58.0.22-000020?style=for-the-badge&logo=expo&logoColor=white)](https://expo.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-Strict_Type_Safe-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
@@ -14,9 +15,24 @@
 
 <br/>
 
+### 🔗 **Live Working Web App**: [https://anshumanholkar.github.io/Gridlock/](https://anshumanholkar.github.io/Gridlock/)
+*Click above to run GRIDLOCK directly in any desktop or mobile browser — zero install required!*
+
+<br/>
+
 *An uncompromising mobile system engineered to eliminate procrastination, enforce daily execution through multimodal AI vision audits, and foster squad competition.*
 
 </div>
+
+---
+
+## 🌐 Live Web Deployment & Submission Links
+
+| Deliverable | Direct Link | Description |
+|---|---|---|
+| **🌐 Live Interactive App** | **[Launch GRIDLOCK](https://anshumanholkar.github.io/Gridlock/)** | Interactive deployment running in browser (zero installation needed) |
+| **📦 GitHub Repository** | **[View Source Code](https://github.com/anshumanholkar/Gridlock)** | Full TypeScript codebase, architecture specs, and commit history |
+| **📄 Academic Architecture Docs** | **[README Documentation](https://github.com/anshumanholkar/Gridlock#readme)** | Complete technical manual, system diagrams, and evaluation criteria |
 
 ---
 

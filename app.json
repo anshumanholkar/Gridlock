@@ -24,6 +24,9 @@
         "WRITE_EXTERNAL_STORAGE"
       ]
     },
+    "experiments": {
+      "baseUrl": "/Gridlock"
+    },
     "plugins": [
       "expo-status-bar",
       [
